@@ -27,6 +27,11 @@
       border-radius: 15px;
     }
 
+    #info {
+      height: 252px;
+      overflow-y: auto;
+    }
+
     #info table {
       margin: 0 auto;
       width: 100%;
@@ -212,10 +217,14 @@
           <path title="Житомирська область" class="region" d="M207.17,41.57L208.02,41.45L210.13,44.11L210.48,46.02L214.37,43.08L217.28,44.32L220.72,44.42L219.8,44.86L220.55,44.85L221.55,50.98L223.37,49.96L223.89,52.72L224.87,50.74L224.19,48.85L226.29,44.89L229.13,43.36L232.19,44.14L235.86,39.96L237.86,39.87L239.37,44.21L240.79,44.55L240.59,48.38L241.29,50.23L242.52,50.62L243.09,54.72L244.4,54.38L244.4,54.38L245.6,54.7L245.75,57.68L244.29,60.39L241.33,60.87L242.25,65.43L243.04,68.26L244.07,66.57L249.47,71.85L247.92,74.24L248.35,76.27L246.23,75.87L246.18,77.81L249.61,81.58L249.15,83.86L250.81,85.1L248.97,85.07L249.52,87.15L251.62,87.32L252.5,89.56L247.35,95.4L249.34,97.83L247.86,100.97L249.38,101.73L249.52,103.24L248.62,103.91L247.68,103.32L247.45,104.26L249.16,104.99L247.24,106.2L247.77,107.03L248.79,106.34L248.79,106.34L251.12,105.9L252.21,107.24L252.21,107.24L252.25,108.39L253.83,108.7L253.43,110.84L255.72,111.1L255.55,113.46L254.77,113.76L256,116.09L254.11,118.63L255.72,120.16L254.24,122.69L255.83,124.55L255.17,126.5L257.16,131.07L255.02,132.75L255.82,133.19L254.34,135.28L250.57,137.63L249.46,136.82L248.61,138.5L247.06,138.39L247.89,140.64L247.1,142.43L247.4,143.24L248.99,143.26L249.34,146.54L249.34,146.54L246.04,146.08L245.14,148.02L244.3,147.59L243.81,148.35L241.7,147.63L241.55,149.63L240.47,148.96L236.33,149.95L231.95,149.27L232.62,147.33L230.46,144.99L232.35,141.96L230.27,139.58L231.17,138.47L230.64,136.52L227.95,134.02L226.99,135.48L223.92,136.39L223.23,138.79L219.48,137.97L217.72,139.99L216.27,137.69L214.81,138.26L212.73,137.49L211.22,139.72L206.78,137.99L206.05,139.39L200.85,140.23L196.95,139.79L192.8,141.47L192.8,141.47L191.29,142.52L188.36,140.31L189.22,138.63L186.86,138.89L185.63,136.68L185.76,133.9L183.09,133.28L184,130.91L183.13,127.62L185.25,127.95L186.29,126.25L187.62,126.27L187.19,124.14L185.43,123.64L186.33,122.15L186,120.58L187.64,119.85L187.06,118.02L185.71,119.18L184.81,114.63L182.16,116.27L177.81,112.94L178.78,112.47L177.59,111.25L175.31,110.76L175.39,108.79L173.07,107.39L174.73,102.19L173.65,102.27L171.19,98.5L171.19,98.5L172.39,98.25L172.34,96.25L171.01,95.26L171.42,93.24L172.84,92.54L173.9,90.05L172.51,85.94L173.23,80.68L171.93,79.53L172.61,78.08L171.28,75.13L172.19,74.7L172.1,73.51L175.67,72.84L175.5,70.91L176.94,69.93L177.24,66.77L180.6,62.37L179.46,58.44L181.28,58.06L182.17,56.72L182.15,55.31L181.24,54.88L181.69,50.8L182.64,50.77L182.49,51.84L184.31,53.52L185.36,53.51L184.24,52.02L184.19,49.38L187.25,48.29L187.04,47.28L187.04,47.28L190.31,49.5L191.65,46.45L193.32,45.87L192.35,41.83L193.42,41.08L195.49,41.84L195.73,43.94L197.65,43.06L196.43,44.99L201.82,43.94L204.31,40.2L207.18,38.25z"/>
           <text x="205" y="95">0</text>
         </g>
-      </g> 
+      </g>
+      <g>
+        <rect id="poupup" x="5%" y="5%" rx="20" ry="20" width="90%" height="90%" style="fill:rgba(255,255,255,0.9);stroke-width:1;stroke:rgba(0,0,0,0.6)" />
+        <rect id="poupup_close" x="90%" y="1%" rx="20" ry="20" width="8%" height="8%" style="fill:rgba(255,255,255,0.9);stroke-width:1;stroke:rgba(0,0,0,0.6)" />
+      </g>
     </svg>
-    <div style="display: none;><input type="checkbox" checked="checked" id="show_nums">Відобразити цифри</div>
-    <div style="display: none;>Колір: <input type="range" min="0" max="255" id="blue_color" value="0"></div>
+    <div style="display: none;"><input type="checkbox" checked="checked" id="show_nums">Відобразити цифри</div>
+    <div style="display: none;">Колір: <input type="range" min="0" max="255" id="blue_color" value="0"></div>
   </div>
 
   <div id="info">
@@ -230,7 +239,25 @@
 let fulldata_arr = [
     {
         title: 'Проблеми фінансування судів у 2020 році',
-        links: true,
+        param: {
+          header: `<table>
+  <tbody>
+    <tr>
+      <th>Суб’єкт звернення</th>
+      <th>Вхідний № і дата (поислання)</th>
+      <th>Суть звернення</th>
+    </tr>
+`,
+          regexp: /\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}/,
+          format: `    <tr>
+      <td>{2}</td>
+      <td><a href="files/{0}.pdf" target="_blank">{3}</a> від {4}</td>
+      <td>{5}</td>
+    </tr>
+`,
+          footer: `  </tbody>
+</table>`,
+        },
         file_arr_text: `{м. Київ}{п. Н.}{Н-2908_0_7-20}{30.04.2020}{оплата праці працівників апарату}.pdf
 {м. Київ}{Шевченківський районний суд}{4936_0_8-20}{04.06.2020}{матеріально-технічне забезпечення}.pdf
 {м. Київ}{Оболонський районний суд}{4940_0_8-20}{04.06.2020}{матеріально-технічне забезпечення}.pdf
@@ -336,7 +363,25 @@ let fulldata_arr = [
     },
     {
         title: 'Кадровий дефіцит в судах у 2020 році',
-        links: false,
+        param: {
+          header: `<table>
+  <tbody>
+    <tr>
+      <th>Суб’єкт звернення</th>
+      <th>Вхідний № і дата</th>
+      <th>Суть звернення</th>
+    </tr>
+`,
+          regexp: /\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}/,
+          format: `    <tr>
+      <td>{2}</td>
+      <td>{3} від {4}</td>
+      <td>{5}</td>
+    </tr>
+`,
+          footer: `  </tbody>
+</table>`,
+        },
         file_arr_text: `{Вінницька область}{Оратівський р.с. (Оратівська РДА)}{85/0/13-20}{28.01.2020}{Відсутність суддів, не здійснюється розгляд справ, прохання призначити суддів}
 {Вінницька область}{Тростянецький р.с. (адвокат Г.)}{Г-1376/0/7-20}{25.02.2020}{Відсутність суддів, не здійснюється розгляд справ}
 {Вінницька область}{Тульчинський р.с.}{9430/0/8-20}{02.10.2020}{Відрядження до суду 2 суддів}
@@ -410,22 +455,6 @@ let fulldata_arr = [
 {Полтавська область}{ДСА України щодо Решетилівського р.с.}{5762/0/8-27}{07.07.2020}{Щодо необхідності розгляду питання відрядження суддів}
 {Рівненська область}{ДСА України щодо Радивилівського р.с.}{5762/0/8-28}{08.07.2020}{Щодо необхідності розгляду питання відрядження суддів}
 {Харківська область}{ДСА України щодо Борівського р.с.}{5762/0/8-29}{09.07.2020}{Щодо необхідності розгляду питання відрядження суддів}`
-    },
-    {
-        title: 'test 2',
-        links: false,
-        file_arr_text: `{м. Київ}{2}{3}{4}{5}{6}
-{м. Київ}{2}{3}{4}{5}{6}
-{м. Київ}{2}{3}{4}{5}{6}
-{м. Київ}{2}{3}{4}{5}{6}
-{м. Київ}{2}{3}{4}{5}{6}`
-    },
-    {
-        title: 'test 3',
-        links: false,
-        file_arr_text: `{м. Київ}{2}{3}{4}{5}{6}
-{м. Київ}{2}{3}{4}{5}{6}
-{Вінницька область}{2}{3}{4}{5}{6}`
     }
 ];
 
@@ -457,22 +486,16 @@ fulldata_arr.forEach((fulldata_el)=>{
         }
       );
     });
-
     for(let i=0; i<file_arr.length; i++) {
-      let match = file_arr[i].match(/\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}/);
+      let match = file_arr[i].match(fulldata_el.param.regexp);
       let this_data = data_arr.find(el=>el.name==match[1]);
       this_data.count++;
       let match3 = match[3];
-      match3 = match3.replace('_','/').replace('_','/').replace('_','/');
-      this_data.detail.push(
-        {
-          subject: match[2],
-          num: match3,
-          date: match[4],
-          essence: match[5],
-          link: file_arr[i]
-        }
-      );
+      for (let j=1; j<match.length; j++) {
+        //match[j]=match[j].replace('_','/').replace('_','/').replace('_','/');
+        match[j]=match[j].replace(new RegExp('_','g'),'/')
+      }
+      this_data.detail.push(match);
     }
     
 
@@ -543,16 +566,8 @@ $(window).resize(function() {
     $map_region_containers
       .mousemove(function() {
         let this_region = $(this).find('.region');
-        // $(document).attr('title', $(this).attr('title'));
         $tooltip_el.text( this_region.attr('title')); 
         $tooltip_el.css( 'background-color', this_region.css('fill') )
-        // try {
-        //   // $tooltip_el.text( $(this).attr('title') + ' [' + data_arr.find(el=>el.name==$(this).attr('title')).count + ']');
-        //   let count = ( fulldata_arr.find(el=>el.id==selected_id) ).data_arr.find(el=>el.name==$(this).attr('title') ).count;
-        //   $tooltip_el.text( $(this).attr('title') + ' [' + count+ ']');
-        // }
-        // catch (exc) { }
-        
       })
       .mouseenter(function(){
         $tooltip_el.show();
@@ -564,6 +579,7 @@ $(window).resize(function() {
         let this_region = $(this).find('.region');
         $('.selected').removeClass('selected');
         $(this).addClass('selected');
+        let param = ( fulldata_arr.find(el=>el.id==selected_id) ).param
         let data = ( fulldata_arr.find(el=>el.id==selected_id) ).data_arr.find(el=>el.name==this_region.attr('title'));
         let links = ( fulldata_arr.find(el=>el.id==selected_id) ).links;
 
@@ -572,40 +588,16 @@ $(window).resize(function() {
         
         let html = `<h2>${data.name} - ${data.count}</h2>`;
 if (data.count > 0) {
-  html += `<table>
-  <tbody>
-    <tr>
-      <th>Суб’єкт звернення</th>
-      <th>Вхідний № і дата</th>
-      <th>Суть звернення</th>
-    </tr>
-`;
+  console.log(data);
+  html += param.header;
 data.detail.forEach((el) => {
-    if (links) {
-        html+=
-`    <tr>
-      <td>${el.subject}</td>
-      <td><a href="files/${el.link}" target="_blank">${el.num}</a> від ${el.date}</td>
-      <td>${el.essence}</td>
-    </tr>
-`;
-    } 
-    else {
-        html+=
-`    <tr>
-      <td>${el.subject}</td>
-      <td>${el.num} від ${el.date}</td>
-      <td>${el.essence}</td>
-    </tr>
-`;
-    }
+  html+=param.format.Format(el);
 });
-html+=
-`  </tbody>
-</table>`;
+html+=param.footer;
 }
 
         $info_el.html(html);
+        $info_el.prop('scrollTop',0);
       });
     
 
@@ -626,7 +618,45 @@ $('#blue_color').change(function(){
     });
 });
 
+const anim_speed = 400;
+
+$('#map_text').click(function(){
+    $('#poupup').show(anim_speed,function(){
+        $('#poupup_close').fadeIn(anim_speed);
+    });
+    
+});
+
+$('#poupup_close').click(function(){
+    $('#poupup_close').fadeOut(anim_speed,function(){
+        $('#poupup').hide(anim_speed);
+    });
+    
+});
+
+$('#poupup_close, #poupup').hide(0);
 document.onselectstart = function() { return false; } 
+
+
+
+
+
+
+String.prototype.Format = function () {
+        let a = this;
+        let arr = arguments;
+        if (arr.length == 1 && Array.isArray(arr[0])) {
+          arr = arr[0];
+        }
+        for (var k in arr) {
+          a = a.replace(new RegExp("\\{" + k + "\\}", 'g'), arr[k]);
+        }
+        return a;
+    }
+
+
+
+
 
 // }
 
