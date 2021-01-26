@@ -69,13 +69,21 @@
       fill-opacity: 1;
       stroke: #fff;
       stroke-opacity: 1;
-      stroke-width: 0.5;
+      stroke-width: 1;
       transition: opacity 0.5s, fill 1s;
       opacity: 0.75;
+      /* stroke-opacity: 0.5; */
     }
-    .region-container:hover .region, .selected {
+    .region-container:hover .region {
       opacity: 1;
     }
+    
+    #map-selector {
+      fill: transparent;
+      stroke-width: 2px;
+      stroke: rgb(0, 92, 170) 
+    }
+
     .region_test1 {
       fill: greenyellow;
     }
@@ -219,6 +227,9 @@
         </g>
       </g>
       <g>
+        <path id="map-selector" />
+      </g>
+      <g>
         <rect id="poupup" x="5%" y="5%" rx="20" ry="20" width="90%" height="90%" style="fill:rgba(255,255,255,0.9);stroke-width:1;stroke:rgba(0,0,0,0.6)" />
         <rect id="poupup_close" x="90%" y="1%" rx="20" ry="20" width="8%" height="8%" style="fill:rgba(255,255,255,0.9);stroke-width:1;stroke:rgba(0,0,0,0.6)" />
       </g>
@@ -240,22 +251,25 @@ let fulldata_arr = [
     {
         title: 'Проблеми фінансування судів у 2020 році',
         param: {
-          header: `<table>
+          header: 
+`<table>
   <tbody>
     <tr>
       <th>Суб’єкт звернення</th>
-      <th>Вхідний № і дата (поислання)</th>
+      <th>Вхідний № і дата (посилання)</th>
       <th>Суть звернення</th>
     </tr>
 `,
           regexp: /\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}/,
-          format: `    <tr>
+          format: 
+`    <tr>
       <td>{2}</td>
       <td><a href="files/{0}.pdf" target="_blank">{3}</a> від {4}</td>
       <td>{5}</td>
     </tr>
 `,
-          footer: `  </tbody>
+          footer: 
+`  </tbody>
 </table>`,
         },
         file_arr_text: `{м. Київ}{п. Н.}{Н-2908_0_7-20}{30.04.2020}{оплата праці працівників апарату}.pdf
@@ -364,7 +378,8 @@ let fulldata_arr = [
     {
         title: 'Кадровий дефіцит в судах у 2020 році',
         param: {
-          header: `<table>
+          header: 
+`<table>
   <tbody>
     <tr>
       <th>Суб’єкт звернення</th>
@@ -373,13 +388,15 @@ let fulldata_arr = [
     </tr>
 `,
           regexp: /\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}\{([^}]+)\}/,
-          format: `    <tr>
+          format: 
+`    <tr>
       <td>{2}</td>
       <td>{3} від {4}</td>
       <td>{5}</td>
     </tr>
 `,
-          footer: `  </tbody>
+          footer: 
+`  </tbody>
 </table>`,
         },
         file_arr_text: `{Вінницька область}{Оратівський р.с. (Оратівська РДА)}{85/0/13-20}{28.01.2020}{Відсутність суддів, не здійснюється розгляд справ, прохання призначити суддів}
@@ -466,6 +483,7 @@ let selected_id = 0;
 
 const $map_regions = $('#map .region');
 const $map_region_containers = $('#map .region-container');
+const $map_selector = $('#map-selector');
 const $tooltip_el = $('#tooltip');
 const $caption_el = $('#map_text');
 const $info_el = $('#info');
@@ -585,10 +603,12 @@ $(window).resize(function() {
 
         $caption_el.text(this_region.attr('title'));
         $caption_el.css('fill', this_region.css('fill'));
+
+        $map_selector.attr('d',this_region.attr('d'))
+
         
         let html = `<h2>${data.name} - ${data.count}</h2>`;
 if (data.count > 0) {
-  console.log(data);
   html += param.header;
 data.detail.forEach((el) => {
   html+=param.format.Format(el);
